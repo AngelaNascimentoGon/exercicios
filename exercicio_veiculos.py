@@ -5,7 +5,7 @@ veiculos = "cadastro_veiculos.json"
 
 def carregar_dados():
     if os.path.exists(veiculos):
-        with open(veiculos, "r", encondig="utf-8") as arq_json:
+        with open(veiculos, "r", encodig="utf-8") as arq_json:
             return json.load(arq_json)
     else:
         return[]
@@ -15,6 +15,13 @@ def obter_dados():
     modelo = input("Digite o modelo do carro:")
     ano = input("Digite o ano do carro:")
     cor = input("Digite a cor do carro:")
+    
+    data_veiculo ={
+        "marca": marca,
+        "modelo": modelo,
+        "ano": ano,
+        "cor": cor
+    }
 
 def cadastrar_veiculo(receber_veiculos):
     db_veiculos = carregar_dados()
