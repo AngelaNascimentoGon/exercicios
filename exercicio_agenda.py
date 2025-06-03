@@ -5,7 +5,7 @@ agenda = "agenda_cabeleireiro.json"
 
 def carregar_dados():
     if os.path.exists(agenda):
-        with open(agenda, "r", ecodind="utf-8") as arq_json:
+        with open(agenda, "r", encoding="utf-8") as arq_json:
             return json.load(arq_json)
     else:
         return[]
